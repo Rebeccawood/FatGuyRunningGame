@@ -35,7 +35,7 @@ button {
     width: 200px;
     padding: 20px;
     padding-top: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 
     font-size: 20px;
 }
@@ -43,7 +43,6 @@ button {
 .backdrop {
     position: absolute;
     display: inline-block;
-    margin-left: 50px;
     padding: 30px;
 
     font-size: 25px;
