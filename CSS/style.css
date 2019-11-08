@@ -6,7 +6,7 @@
 body {
     background-image: url(../Images/Screenshot\ 2019-11-02\ at\ 20.41.12.png);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 
 .text {
@@ -38,4 +38,18 @@ button {
     margin-bottom: 20px;
 
     font-size: 20px;
+}
+
+.backdrop {
+    position: absolute;
+    display: inline-block;
+    margin-left: 50px;
+    padding: 30px;
+
+    font-size: 25px;
+    letter-spacing: 3px
+}
+
+.top {
+    position: absolute;
 }

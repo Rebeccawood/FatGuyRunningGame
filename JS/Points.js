@@ -11,10 +11,10 @@ class Points {
         this.pointsHeight = 50
         this.pointsWidth = 60
 
-    
-        this.album = ["./Images/beer.png", "./Images/hamburger.png","./Images/fries.png" ]
+
+        this.album = ["./Images/beer.png", "./Images/hamburger.png", "./Images/fries.png"]
         let imageRandom = Math.floor(Math.random() * (3 - 0) - 0)
-        
+
         this.pointsImg = new Image()
         this.pointsImg.src = this.album[imageRandom]
     }
