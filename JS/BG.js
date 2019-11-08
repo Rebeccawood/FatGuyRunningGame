@@ -13,7 +13,7 @@ class Background {
         this.velX = 0.3
 
         this.imgBg = new Image()
-        this.imgBg.src = ('../Images/candyland1bluecopycopy.png')
+        this.imgBg.src = ('../Images/candyland1pinkfade.png')
     }
     draw() {
         this.ctx.drawImage(this.imgBg, this.posX, this.posY, this.width, this.height)

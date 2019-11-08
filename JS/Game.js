@@ -20,7 +20,7 @@ const Game = {
     score: undefined,
     platform: [],
 
-    // ------------------------- GAME START ---------------------------------------- //
+    // ----------------------------- GAME START ------------------------------------ //
 
     init(id) {
         this.canvasDom = document.getElementById(id)
@@ -50,12 +50,11 @@ const Game = {
             this.moveAll()
 
             this.generatePlatform()
-            this.clearPlatform()
-
-            this.generateEnemy()
-            this.clearEnemy()
-
             this.generatePoints()
+            this.generateEnemy()
+
+            this.clearPlatform()
+            this.clearEnemy()
             this.clearPoints()
 
             this.platformCollisions()
@@ -87,6 +86,7 @@ const Game = {
         this.player.draw()
         this.drawScore()
     },
+
     moveAll() {
         this.background.move()
         this.player.move()
@@ -128,6 +128,7 @@ const Game = {
             }
         });
     },
+
     clearEnemy() {
         this.enemy.forEach((enemy, idx) => {
             if (enemy.posX <= 0) {
@@ -136,6 +137,7 @@ const Game = {
             }
         });
     },
+
     clearPoints() {
         this.points.forEach((points, idx) => {
             if (points.posX <= 0) {
@@ -155,7 +157,7 @@ const Game = {
             if (this.player.posY + this.player.playerHeight > platform.posY + 10 &&
                 this.player.posX + this.player.playerWidth > platform.posX + 40 &&
                 this.player.posX < platform.posX + platform.platformWidth - 40 &&
-                this.player.posY < platform.posY + platform.platformHeight) {
+                this.player.posY < platform.posY + platform.platformHeight - 30) {
 
                 this.player.onPlatform = true
                 this.player.posY = platform.posY - this.player.playerHeight + 20
@@ -177,24 +179,24 @@ const Game = {
     },
 
     pointCollisions() {
-        this.points.forEach(elm => {
+        this.points.forEach((elm, idx) => {
             if (this.player.posY + this.player.playerHeight > elm.posY + 5 &&
                 this.player.posX + this.player.playerWidth > elm.posX + 5 &&
                 this.player.posX < elm.posX + elm.pointsWidth - 5 &&
                 this.player.posY < elm.posY + elm.pointsHeight - 5) {
-                this.points.splice(0, 1)
+                this.points.splice(idx, 1)
                 this.score++
             }
         })
     },
 
-    // -------------------------- SCORE  --------------------------------------- //
+    // -------------------------------- SCORE ------------------------------------- //
 
     drawScore() {
         this.scoreboard.update(this.score)
     },
 
-    // -------------------------- KEY FUNCTIONS --------------------------------------- //
+    // ----------------------------- KEY FUNCTIONS -------------------------------- //
 
     setEventListeners() {
         document.onkeydown = e => {
@@ -216,11 +218,10 @@ const Game = {
     // ---------------------------- END GAME ------------------------------------- //
 
     gameOver() {
-        document.getElementById('background').remove()
+        document.getElementById('background').pause()
         document.getElementById("gameover").play()
 
         clearInterval(this.interval);
         alert("GAME OVER")
-
     },
 }
