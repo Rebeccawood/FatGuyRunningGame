@@ -60,6 +60,7 @@ const Game = {
             this.platformCollisions()
             this.enemyCollisions()
             this.pointCollisions()
+            this.leaveGame()
 
         }, 1000 / this.fps);
     },
@@ -188,6 +189,15 @@ const Game = {
                 this.score++
             }
         })
+    },
+
+    leaveGame() {
+
+        if (this.player.posX > this.canvasDom.width) {
+            this.player.posX = 70
+            this.background.true = !this.background.true
+            this.background.true ? this.background.imgBg.src = this.background.album[0] : this.background.imgBg.src = this.background.album[1]
+        }
     },
 
     // -------------------------------- SCORE ------------------------------------- //

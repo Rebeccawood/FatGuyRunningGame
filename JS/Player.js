@@ -41,14 +41,13 @@ class Player {
   goUp() {
     if (this.posY >= this.posY0) {
       this.posY -= 150;
-      this.velY -= 4;
+      this.velY -= 6;
       this.velJump = 5
     }
   }
 
   move() {
     this.onPlatform ? this.velY = 1 : null
-    console.log(this.vel)
 
     let gravity = 0.5
     if (this.posY <= this.posY0) {
