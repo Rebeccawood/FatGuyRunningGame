@@ -5,7 +5,7 @@ class Player {
     this.gameHeight = height
 
     this.img = new Image()
-    this.img.src = ("../Images/fat-png.png")
+    this.img.src = ("./Images/fat-png.png")
 
     this.playerWidth = 80
     this.playerHeight = 110

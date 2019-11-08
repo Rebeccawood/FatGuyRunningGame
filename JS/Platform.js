@@ -13,7 +13,7 @@ class Platform {
         this.platformWidth = 180
 
         this.platformImg = new Image()
-        this.platformImg.src = ("../Images/Pizza.png")
+        this.platformImg.src = ("./Images/Pizza.png")
     }
     draw() {
         this.ctx.drawImage(this.platformImg, this.posX, this.posY, this.platformWidth, this.platformHeight)

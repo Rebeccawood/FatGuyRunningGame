@@ -12,7 +12,7 @@ class Enemy {
         this.enemyHeight = 120
         this.enemyWidth = 140
 
-        this.album = ["../Images/enemy1.png", "../Images/enemy2.png", "../Images/enemy3.png"]
+        this.album = ["./Images/enemy1.png", "./Images/enemy2.png", "./Images/enemy3.png"]
         let imageRandom = Math.floor(Math.random() * (3 - 0) - 0)
 
         this.image = new Image()
