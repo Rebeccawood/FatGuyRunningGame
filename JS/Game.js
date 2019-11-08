@@ -192,7 +192,6 @@ const Game = {
     },
 
     leaveGame() {
-
         if (this.player.posX > this.canvasDom.width) {
             this.player.posX = 70
             this.background.true = !this.background.true
@@ -230,7 +229,6 @@ const Game = {
     gameOver() {
         document.getElementById('background').pause()
         document.getElementById("gameover").play()
-
         clearInterval(this.interval);
         alert("GAME OVER")
     },
