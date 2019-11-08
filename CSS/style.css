@@ -1,0 +1,41 @@
+* {
+    font-family: 'Luckiest Guy',
+        cursive;
+}
+
+body {
+    background-image: url(../Images/Screenshot\ 2019-11-02\ at\ 20.41.12.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.text {
+    background: #EB1E1E;
+    color: white;
+
+    border: 2px solid white;
+    border-radius: 10%
+}
+
+h1 {
+    display: inline-block;
+    align-content: center;
+
+    padding: 20px 15px;
+    padding-top: 35px;
+
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+button {
+    display: block;
+
+    width: 200px;
+    padding: 20px;
+    padding-top: 26px;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
